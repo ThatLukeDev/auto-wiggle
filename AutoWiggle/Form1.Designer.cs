@@ -47,14 +47,14 @@
             // 
             // amount
             // 
-            this.amount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.amount.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.amount.Location = new System.Drawing.Point(0, 0);
+            this.amount.Location = new System.Drawing.Point(0, 326);
             this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(800, 405);
+            this.amount.Size = new System.Drawing.Size(800, 79);
             this.amount.TabIndex = 1;
             this.amount.Text = "Timer: 1 min";
-            this.amount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.amount.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // AutoWiggle
             // 
@@ -66,6 +66,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AutoWiggle";
             this.Text = "AutoWiggle";
+            this.Load += new System.EventHandler(this.AutoWiggle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.slider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
