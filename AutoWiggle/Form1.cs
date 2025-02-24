@@ -94,8 +94,15 @@ namespace AutoWiggle
 
                     for (int i = 0; i < 100; i++)
                     {
-                        mouseMoveDelta(rnd.Next(10), rnd.Next(10) - 5);
+                        lastPos = Cursor.Position;
+
+                        mouseMoveDelta(rnd.Next(-5, 5), rnd.Next(-5, 5));
                         await Task.Delay(10);
+
+                        if (Math.Abs(lastPos.X - Cursor.Position.X) > 10 || Math.Abs(lastPos.Y - Cursor.Position.Y) > 10)
+                        {
+                            break;
+                        }
                     }
 
                     lastPos = Cursor.Position;
